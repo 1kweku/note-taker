@@ -11,10 +11,10 @@ app.use(express.json());
 app.use(express.static('public'));
 
 // GET route for index.html
-app.get('/', (req, res) => res.sendFile('/Users/1kweku/Downloads/Bootcamp/note-taker/public/assets/index.html'))
+app.get('/', (req, res) => res.sendFile('note-taker/public/assets/index.html'))
 
 // GET route for notes.html
-app.get('/notes', (req, res) => res.sendFile('/Users/1kweku/Downloads/Bootcamp/note-taker/public/assets/notes.html'))
+app.get('/notes', (req, res) => res.sendFile('note-taker/public/assets/notes.html'))
 
 app.get('/api/notes', (req, res) => {
     res.json(db);
@@ -60,3 +60,4 @@ app.post('/api/notes', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Listening on http://localhost:${PORT}`)
 })
+
